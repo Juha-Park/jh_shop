@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="111bd96f-f4b3-46c5-93df-575e8ff196c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/ShopApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/config/AuditConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/config/AuditorAwareImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/config/CustomAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/constant/ItemSellStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/constant/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/constant/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/MemberControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/itemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/controller/itemControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/CartDetailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/CartItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/CartOrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/ItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/ItemFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/ItemImgDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/ItemSearchDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/MainItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/MemberFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/OrderHistDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/dto/OrderItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/BaseTimeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/CartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/ItemImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/MemberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/entyty/OrderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/exception/OutOfStockException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/CartItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/ItemImgRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/ItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/ItemRepositoryCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/ItemRepositoryCustomImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/OrderItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/CartServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/ItemImgService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/ItemServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/MemberServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/service/OrderServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/layout1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cart/cartList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/item/itemDtl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/item/itemForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/item/itemMng.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts/layout1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/memberForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/memberLoginForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderHist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/shop/ShopApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/ShopApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/config/AuditConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/config/AuditorAwareImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/config/CustomAuthenticationEntryPoint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/config/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/config/WebMvcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/constant/ItemSellStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/constant/OrderStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/constant/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/CartController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/MainController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/MemberController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/MemberControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/OrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/itemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/controller/itemControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/CartDetailDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/CartItemDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/CartOrderDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/ItemDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/ItemFormDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/ItemImgDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/ItemSearchDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/MainItemDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/MemberFormDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/OrderDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/OrderHistDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/OrderItemDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/dto/QMainItemDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/BaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/BaseTimeEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/Cart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/CartItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/CartTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/ItemImg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/MemberTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/OrderItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/OrderTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QBaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QBaseTimeEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QCart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QCartItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QItemImg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QMember.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/entyty/QOrderItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/exception/OutOfStockException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/CartItemRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/CartRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/ItemImgRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/ItemRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/ItemRepositoryCustom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/ItemRepositoryCustomImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/MemberRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/OrderItemRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/repository/OrderRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/CartService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/CartServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/FileService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/ItemImgService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/ItemService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/ItemServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/MemberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/MemberServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/shop/service/OrderServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/layout1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/cart/cartList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/item/itemDtl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/item/itemForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/item/itemMng.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/layouts/layout1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/member/memberForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/member/memberLoginForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/order/orderHist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/dto/QMainItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QBaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QBaseTimeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QCartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QItemImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/shop/entyty/QOrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/shop/ShopApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2CbvFymQZdq5goQya6UIXV6oLXC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/박주하/spring-workspace/shop",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\박주하\spring-workspace\shop\src\main\resources\static" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.shop.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ShopApplication">
+    <configuration name="ShopApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shop.ShopApplication" />
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartServiceTest.addCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shop.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shop.service" />
+      <option name="MAIN_CLASS_NAME" value="com.shop.service.CartServiceTest" />
+      <option name="METHOD_NAME" value="addCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.cancelOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shop.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shop.service" />
+      <option name="MAIN_CLASS_NAME" value="com.shop.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="cancelOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shop.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shop.service" />
+      <option name="MAIN_CLASS_NAME" value="com.shop.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="order" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ShopApplication" />
+        <item itemvalue="JUnit.CartServiceTest.addCart" />
+        <item itemvalue="JUnit.OrderServiceTest.cancelOrder" />
+        <item itemvalue="JUnit.OrderServiceTest.order" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="111bd96f-f4b3-46c5-93df-575e8ff196c3" name="Changes" comment="" />
+      <created>1659084006699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659084006699</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="afff8eee-f161-4b59-804f-491cff782834">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="afff8eee-f161-4b59-804f-491cff782834" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/src" />
+    </ignored-roots>
+  </component>
+</project>
