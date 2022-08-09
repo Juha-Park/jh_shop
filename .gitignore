@@ -8,7 +8,5 @@ HELP.md
 
 # Maven
 log/
-target/classes/
-target/generated-test-sources/
-target/maven-status/
+target/
 
