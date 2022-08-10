@@ -18,7 +18,7 @@ public class Cart extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY) //일대일 매핑.
+    @OneToOne(fetch = FetchType.LAZY) // 일대일 매핑.
     @JoinColumn(name="member_id") //매핑할 외래키를 지정.
     private Member member;
 
