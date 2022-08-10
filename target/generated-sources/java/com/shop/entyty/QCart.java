@@ -2,6 +2,7 @@ package com.shop.entyty;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
+import com.shop.entity.Cart;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
