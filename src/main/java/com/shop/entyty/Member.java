@@ -18,7 +18,7 @@ public class Member extends BaseEntity{
 
     @Id
     @Column(name="member_id")
-    @GeneratedValue(strategy = GenerationType.AUTO) //기본키를 생성하는 전략
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //기본키를 생성하는 전략
     private Long id;
 
     private String name;

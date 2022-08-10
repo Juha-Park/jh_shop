@@ -18,7 +18,7 @@ public class Item extends BaseEntity{
 
     @Id
     @Column(name="item_id")
-    @GeneratedValue(strategy=GenerationType.AUTO) //기본키를 생성하는 전략
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //기본키를 생성하는 전략
     private Long id; //상품 코드
 
     @Column(nullable=false, length = 50)
