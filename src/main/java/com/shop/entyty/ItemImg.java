@@ -3,6 +3,7 @@ package com.shop.entyty;
 
 import lombok.Getter;
 import lombok.Setter;
+import com.shop.entyty.Item;
 
 import javax.persistence.*;
 
