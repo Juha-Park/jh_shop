@@ -1,5 +1,6 @@
 package com.shop.entyty;
 
+import com.shop.entity.Cart;
 
 import lombok.Getter;
 import lombok.Setter;

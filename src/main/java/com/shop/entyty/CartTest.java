@@ -1,6 +1,6 @@
 package com.shop.entyty;
 
-
+import com.shop.entity.Cart;
 import com.shop.dto.MemberFormDto;
 import com.shop.repository.CartRepository;
 import com.shop.repository.MemberRepository;
