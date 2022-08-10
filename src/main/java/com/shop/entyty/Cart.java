@@ -8,7 +8,7 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cart", schema = "cart")
+@Table(name = "cart")
 @Getter @Setter
 @ToString
 public class Cart extends BaseEntity {
