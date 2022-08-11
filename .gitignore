@@ -8,6 +8,4 @@ HELP.md
 
 # Maven
 log/
-target/classes/
-target/maven-status/
 
