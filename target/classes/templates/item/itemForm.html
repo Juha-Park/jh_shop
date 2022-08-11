@@ -10,7 +10,7 @@
 
         /* 상품 등록 시 실패 메시지를 받아서 상품 등록 페이지에 재진입 시 alert를 통해서 실패 사유를 보여줌. */
         $(document).ready(function(){
-            var errorMessage = [[${errorMessage}]];
+            var errorMessage = [ [${errorMessage}] ];
             if(errorMessage != null){
                 alert(errorMessage);
             }
