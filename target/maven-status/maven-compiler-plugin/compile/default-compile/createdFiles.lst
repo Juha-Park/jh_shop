@@ -17,7 +17,6 @@ com\shop\dto\OrderItemDto.class
 com\shop\entyty\BaseTimeEntity.class
 com\shop\config\WebMvcConfig.class
 com\shop\dto\CartItemDto.class
-com\shop\entyty\Cart.class
 com\shop\entyty\QCartItem.class
 com\shop\entyty\Item.class
 com\shop\service\CartService.class
@@ -34,7 +33,6 @@ com\shop\service\OrderService.class
 com\shop\entyty\BaseEntity.class
 com\shop\service\ItemImgService.class
 com\shop\entyty\Member.class
-com\shop\entyty\QCart.class
 com\shop\repository\MemberRepository.class
 com\shop\dto\MemberFormDto.class
 com\shop\config\SecurityConfig.class
@@ -60,6 +58,7 @@ com\shop\dto\ItemDto.class
 com\shop\entyty\OrderTest.class
 com\shop\entyty\CartTest.class
 com\shop\repository\ItemRepositoryCustomImpl.class
+com\shop\entity\Cart.class
 com\shop\entyty\QItem.class
 com\shop\entyty\OrderItem.class
 com\shop\repository\CartRepository.class
@@ -69,3 +68,4 @@ com\shop\entyty\CartItem.class
 com\shop\entyty\QMember.class
 com\shop\controller\MemberController.class
 com\shop\entyty\QItemImg.class
+com\shop\entity\QCart.class

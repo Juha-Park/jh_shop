@@ -30,6 +30,7 @@ C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\entyty\Order.
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\service\CartServiceTest.java
 C:\Users\박주하\spring-workspace\jh_shop\target\generated-sources\java\com\shop\entyty\QCartItem.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\dto\ItemFormDto.java
+C:\Users\박주하\spring-workspace\jh_shop\target\generated-sources\java\com\shop\entity\QCart.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\dto\OrderItemDto.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\entyty\OrderTest.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\service\ItemService.java
@@ -52,7 +53,6 @@ C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\dto\ItemDto.j
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\repository\ItemRepositoryCustomImpl.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\service\ItemServiceTest.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\service\MemberServiceTest.java
-C:\Users\박주하\spring-workspace\jh_shop\target\generated-sources\java\com\shop\entyty\QCart.java
 C:\Users\박주하\spring-workspace\jh_shop\target\generated-sources\java\com\shop\entyty\QMember.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\controller\itemController.java
 C:\Users\박주하\spring-workspace\jh_shop\src\main\java\com\shop\exception\OutOfStockException.java

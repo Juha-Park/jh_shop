@@ -24,7 +24,7 @@ public class QCartItem extends EntityPathBase<CartItem> {
 
     public final QBaseEntity _super = new QBaseEntity(this);
 
-    public final QCart cart;
+    public final com.shop.entity.QCart cart;
 
     public final NumberPath<Integer> count = createNumber("count", Integer.class);
 
@@ -62,7 +62,7 @@ public class QCartItem extends EntityPathBase<CartItem> {
 
     public QCartItem(Class<? extends CartItem> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.cart = inits.isInitialized("cart") ? new QCart(forProperty("cart"), inits.get("cart")) : null;
+        this.cart = inits.isInitialized("cart") ? new com.shop.entity.QCart(forProperty("cart"), inits.get("cart")) : null;
         this.item = inits.isInitialized("item") ? new QItem(forProperty("item")) : null;
     }
 

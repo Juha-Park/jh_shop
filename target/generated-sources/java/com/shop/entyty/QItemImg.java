@@ -3,7 +3,6 @@ package com.shop.entyty;
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
 import com.querydsl.core.types.dsl.*;
-import com.shop.entyty.Item;
 
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
