@@ -6,7 +6,7 @@
 <!-- 사용자 CSS 추가 -->
 <th:block layout:fragment="css">
     <style>
-        .error{
+        .error {
             color: #bd2130;
         }
     </style>
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             <label th:for="password">비밀번호</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호를 입력해 주세요.">
+            <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호 입력">
         </div>
         <p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>
         <button class="btn btn-primary">로그인</button>
