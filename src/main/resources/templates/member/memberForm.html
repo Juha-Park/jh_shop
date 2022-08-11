@@ -51,7 +51,7 @@
             <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="fieldError">Incorrect data</p>
         </div>
         <div style="text-align: center">
-            <button type="submit" class="btn btn-primary" style="">완료</button>
+            <button type="submit" class="btn btn-primary" style="">Submit</button>
         </div>
         <!--스프링 시큐리티 사용시, CSRF 방어를 위해 모든 POST 방식의 데이터 전송에 CSRF 토큰값이 필요.-->
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
