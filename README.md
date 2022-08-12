@@ -230,7 +230,7 @@ public Page<OrderHistDto> getOrderList(String email, Pageable pageable){
 }
 ```
 
-#### &nbsp;&nbsp;&nbsp;4.4. CartService – 장바구니 관리(상품 담기, 수량 변경, 상품 삭제), 장바구니 상품 주문 클래스
+### &nbsp;&nbsp;&nbsp;4.4. CartService – 장바구니 관리(상품 담기&수량 변경&상품 삭제), 장바구니 상품 주문 클래스
 
 1. 장바구니에 상품을 담는 메소드.
 ```java
