@@ -324,8 +324,7 @@ http.authorizeRequests()
                 .mvcMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated();
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;나는 부트 스트랩 파일들을 /resources/static/에 위치시켰기 때문에 비로그인 접근 시 Authorization 에러가 났던 것이었고, 이를 해결하기 위  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해서 /css, /js, /img의 하위 폴더에 위치한 정적 자원으로의 접근에는 보안상의 제한을 무시한다는 설정을 해 주어야 했다.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;나는 부트 스트랩 파일들을 /resources/static/에 위치시켰기 때문에 비로그인 접근 시 Authorization 에러가 났던 것이었고, 이를 해결하기 위해서 /css, /js, /img의 하위 폴더에 위치한 정적 자원으로의 접근에는 보안상의 제한을 무시한다는 설정을 해 주어야 했다.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;따라서 SecurityConfig 클래스에 아래의 코드를 추가해 줌으로써 정적 자원에 대한 보안 설정이 무시되고 템플릿이 잘 적용되었다.
 ```java
 @Bean
