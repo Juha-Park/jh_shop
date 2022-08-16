@@ -1,7 +1,8 @@
 HELP.md
-src.main.resources.application.properties
 
 # IntelliJ IDEA
+application-aws.properties
+
 .idea
 *.iws
 *.iml
