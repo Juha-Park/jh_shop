@@ -47,10 +47,11 @@ public class FileService {
         uploadOnS3(savedFileName, file);
         //주소 할당
         String fileUploadFullUrl = uploadPath + "/" + savedFileName;
+        //Multipartfile->File로 전환되면서 로컬에 생성된 파일을 삭제.
+        file.delete();
         //바이트 단위의 출력을 내보내는 FileOutputStream 클래스 사용.
         //생성자로 파일이 저장될 위치와 파일의 이름을 넘겨 파일에 쓸 파일 출력 스트림을 만듦.
         FileOutputStream fos = new FileOutputStream(fileUploadFullUrl);
-        //fileData를 파일 출력 스트림에 입력.
         fos.write(itemImgFile.getBytes());
         fos.close();
         //업로드된 파일의 이름을 반환.
