@@ -1,12 +1,9 @@
 package com.shop.service;
 
 
-import com.amazonaws.AmazonClientException;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.services.s3.transfer.TransferManager;
-import com.amazonaws.services.s3.transfer.Upload;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +12,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -28,52 +27,56 @@ public class FileService {
     @Value("${cloud.aws.s3.bucket}")
     private String bucket;
 
-    //버킷 주소 동적 할당
-    @Value("${cloud.aws.s3.bucket.url}")
-    private String uploadPath;
-
-    public String uploadFile(String uploadPath, String originalFileName, MultipartFile itemImgFile) throws Exception{
+    public String mkFileName(String oriImgName, MultipartFile itemImgFile) {
 
         //서로 다른 개체들을 구별하기 위해서는 이름을 부여해야 하므로 UUID(Universally Unique Identifier) 사용.(파일명 중복 문제 해결.)
         UUID uuid = UUID.randomUUID();
-        String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
+        //확장자를 찾기 위한 코드.
+        String extension = oriImgName.substring(oriImgName.lastIndexOf("."));
         //UUID로 받은 값과 원래 파일의 이름의 확장자를 조합하여 저장될 파일 이름을 만듦.
-        String savedFileName = uuid.toString() + extension;
-        //시스템 환경에 관한 정보를 얻기 위해 System.getProperty 사용. (user.dir : 현재 작업 디렉토리)
-        File file = new File(System.getProperty("user.dir") + savedFileName);
-        //파일 변환
-        itemImgFile.transferTo(file);
-        //S3 파일 업로드
-        uploadOnS3(savedFileName, file);
-        //주소 할당
-        String fileUploadFullUrl = uploadPath + "/" + savedFileName;
-        //Multipartfile->File로 전환되면서 로컬에 생성된 파일을 삭제.
-        file.delete();
-        //바이트 단위의 출력을 내보내는 FileOutputStream 클래스 사용.
-        //생성자로 파일이 저장될 위치와 파일의 이름을 넘겨 파일에 쓸 파일 출력 스트림을 만듦.
-        FileOutputStream fos = new FileOutputStream(fileUploadFullUrl);
-        fos.write(itemImgFile.getBytes());
-        fos.close();
-        //업로드된 파일의 이름을 반환.
-        return savedFileName;
+        String fileName = uuid.toString() + extension;
+        return fileName;
     }
 
-    private void uploadOnS3(final String savedFileName, final File file) {
-        //AWS S3 전송 객체 생성
-        final TransferManager transferManager = new TransferManager(this.amazonS3Client);
-        //요청 객체 생성
-        final PutObjectRequest request = new PutObjectRequest(bucket, savedFileName, file);
-        //업로드 시도
-        final Upload upload = transferManager.upload(request);
+    public String uploadFile(String oriImgName, MultipartFile itemImgFile) throws IOException {
 
-        try {
-            upload.waitForCompletion();
-        } catch (AmazonClientException amazonClientException) {
-            log.error(amazonClientException.getMessage());
-        } catch (InterruptedException e) {
-            log.error(e.getMessage());
+        //S3에 Multipartfile 타입은 전송이 안 되므로 MultiPartFile을 File로 전환.
+        File uploadFile = convert(itemImgFile)
+                .orElseThrow(() -> new IllegalArgumentException("MultipartFile -> File 전환이 실패했습니다."));
+        String uploadImageUrl = putS3(uploadFile, mkFileName(oriImgName, itemImgFile));
+        removeNewFile(uploadFile);
+        //업로드된 파일의 S3 url 주소를 반환.
+        return uploadImageUrl;
+    }
+
+    //Spring Boot Cloud AWS를 사용하게 되면 S3 관련 Bean을 자동으로 생성해주므로, @Configuration 없이 AmazonS3Client를 DI 받음.
+    //외부에서 정적 파일을 읽을 수 있도록 하기 위해서, 전환된 File을 S3에 public 읽기 권한으로 넣어줌.
+    private String putS3(File uploadFile, String fileName) {
+        amazonS3Client.putObject(new PutObjectRequest(bucket, fileName, uploadFile)
+                .withCannedAcl(CannedAccessControlList.PublicRead));
+        return amazonS3Client.getUrl(bucket, fileName).toString();
+    }
+
+    //Multipartfile이 File로 전환되면서 로컬에 생성된 File을 삭제.
+    private void removeNewFile(File targetFile) {
+        if (targetFile.delete()) {
+            log.info("파일이 삭제되었습니다.");
+        } else {
+            log.info("파일이 삭제되지 못했습니다.");
         }
-     }
+    }
+
+    private Optional<File> convert(MultipartFile file) throws IOException {
+        File convertFile = new File(file.getOriginalFilename());
+        if(convertFile.createNewFile()) {
+            try (FileOutputStream fos = new FileOutputStream(convertFile)) {
+                fos.write(file.getBytes());
+            }
+            return Optional.of(convertFile);
+        }
+
+        return Optional.empty();
+    }
 
     public void deleteFile(String filePath) throws Exception{
 
