@@ -1,8 +1,9 @@
 HELP.md
 
-# IntelliJ IDEA
+# Database
 application-aws.properties
 
+# IntelliJ IDEA
 .idea
 *.iws
 *.iml
