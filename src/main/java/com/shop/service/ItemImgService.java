@@ -18,9 +18,8 @@ import javax.persistence.EntityNotFoundException;
 @Transactional
 public class ItemImgService {
 
-    //@Value 어노테이션을 통해 application.properties 파일에 등록한 itemImgLocation 값을 불러와서 itemImgLocation 변수에 넣어줌.
-    @Value("${itemImgLocation}")
-    private String itemImgLocation;
+    @Value("${cloud.aws.s3.bucket.url}")
+    private String uploadPath;
 
     private final ItemImgRepository itemImgRepository;
 
@@ -35,7 +34,7 @@ public class ItemImgService {
         if(!StringUtils.isEmpty(oriImgName)){
 
             //사용자가 상품의 이미지를 등록했다면 FileService 클래스의 uploadFile 메소드를 호출하여 변수 imgName에 저장.
-            imgName = fileService.uploadFile(itemImgLocation, oriImgName, itemImgFile.getBytes());
+            imgName = fileService.uploadFile(uploadPath, oriImgName, itemImgFile);
             //저장한 상품 이미지를 불러올 경로를 설정.
             imgUrl = "/images/item/" + imgName;
         }
@@ -54,12 +53,12 @@ public class ItemImgService {
                     .orElseThrow(EntityNotFoundException::new);
             //기존 이미지 파일 삭제
             if (!StringUtils.isEmpty(savedItemImg.getImgName())) {
-                fileService.deleteFile(itemImgLocation + "/" + savedItemImg.getImgName());
+                fileService.deleteFile(uploadPath + "/" + savedItemImg.getImgName());
             }
 
             String oriImgName = itemImgFile.getOriginalFilename();
             //업데이트한 상품 이미지 파일을 업로드.
-            String imgName = fileService.uploadFile(itemImgLocation, oriImgName, itemImgFile.getBytes());
+            String imgName = fileService.uploadFile(uploadPath, oriImgName, itemImgFile);
             String imgUrl = "/images/item/" + imgName;
             //변경된 상품 이미지 정보를 세팅.
             //savedItemImg 엔티티는 현재 영속 상태이므로 itemImgRepository.save() 로직을 호출하지 않음.
