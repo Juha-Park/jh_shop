@@ -1,31 +1,54 @@
 package com.shop.service;
 
 
-import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
 
-@Slf4j
+
 @RequiredArgsConstructor
 @Service
+@Log
 public class FileService {
+    private AmazonS3 s3Client;
 
-    private final AmazonS3Client amazonS3Client;
+    @Value("${cloud.aws.credentials.accessKey}")
+    private String accessKey;
 
-    //버킷 이름 동적 할당
+    @Value("${cloud.aws.credentials.secretKey}")
+    private String secretKey;
+
     @Value("${cloud.aws.s3.bucket}")
     private String bucket;
+
+    @Value("${cloud.aws.region.static}")
+    private String region;
+
+    @PostConstruct
+    public void setS3Client() {
+        AWSCredentials credentials = new BasicAWSCredentials(this.accessKey, this.secretKey);
+
+        s3Client = AmazonS3ClientBuilder.standard()
+                .withCredentials(new AWSStaticCredentialsProvider(credentials))
+                .withRegion(this.region)
+                .build();
+    }
 
     public String mkFileName(String oriImgName, MultipartFile itemImgFile) {
 
@@ -49,13 +72,14 @@ public class FileService {
         return uploadImageUrl;
     }
 
-    //Spring Boot Cloud AWS를 사용하게 되면 S3 관련 Bean을 자동으로 생성해주므로, @Configuration 없이 AmazonS3Client를 DI 받음.
-    //외부에서 정적 파일을 읽을 수 있도록 하기 위해서, 전환된 File을 S3에 public 읽기 권한으로 설정.
-    private String putS3(File uploadFile, String fileName) {
-        amazonS3Client.putObject(new PutObjectRequest(bucket, fileName, uploadFile)
+    public String putS3(File uploadFile, String fileName) throws IOException {
+
+        //외부에서 정적 파일을 읽을 수 있도록 하기 위해서, 전환된 File을 S3에 public 읽기 권한으로 업로드.
+        s3Client.putObject(new PutObjectRequest(bucket, fileName, uploadFile)
                 .withCannedAcl(CannedAccessControlList.PublicRead));
-        return amazonS3Client.getUrl(bucket, fileName).toString();
+        return s3Client.getUrl(bucket, fileName).toString();
     }
+
 
     //Multipartfile이 File로 전환되면서 로컬에 생성된 File을 삭제.
     private void removeNewFile(File targetFile) {
