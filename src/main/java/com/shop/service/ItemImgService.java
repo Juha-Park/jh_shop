@@ -37,7 +37,7 @@ public class ItemImgService {
             //사용자가 상품의 이미지를 등록했다면 FileService 클래스의 uploadFile 메소드를 호출하여 변수 imgName에 저장.
             imgName = fileService.mkFileName(oriImgName, itemImgFile);
             //저장한 상품 이미지를 불러올 경로를 설정.
-            imgUrl = fileService.uploadFile(oriImgName, itemImgFile) + imgName;
+            imgUrl = fileService.uploadFile(oriImgName, itemImgFile) + "/" + imgName;
         }
 
         //상품 이미지 정보 저장
@@ -60,7 +60,7 @@ public class ItemImgService {
             String oriImgName = itemImgFile.getOriginalFilename();
             //업데이트한 상품 이미지 파일을 업로드.
             String imgName = fileService.mkFileName(oriImgName, itemImgFile);
-            String imgUrl = fileService.uploadFile(oriImgName, itemImgFile) + imgName;
+            String imgUrl = fileService.uploadFile(oriImgName, itemImgFile) + "/" + imgName;
             //변경된 상품 이미지 정보를 세팅.
             //savedItemImg 엔티티는 현재 영속 상태이므로 itemImgRepository.save() 로직을 호출하지 않음.
             //데이터를 변경하는 것만으로 변경 감지 기능이 동작하여 트랜잭션이 끝날 때 update 쿼리가 실행됨.
