@@ -50,7 +50,7 @@ public class FileService {
     }
 
     //Spring Boot Cloud AWS를 사용하게 되면 S3 관련 Bean을 자동으로 생성해주므로, @Configuration 없이 AmazonS3Client를 DI 받음.
-    //외부에서 정적 파일을 읽을 수 있도록 하기 위해서, 전환된 File을 S3에 public 읽기 권한으로 넣어줌.
+    //외부에서 정적 파일을 읽을 수 있도록 하기 위해서, 전환된 File을 S3에 public 읽기 권한으로 설정.
     private String putS3(File uploadFile, String fileName) {
         amazonS3Client.putObject(new PutObjectRequest(bucket, fileName, uploadFile)
                 .withCannedAcl(CannedAccessControlList.PublicRead));
